@@ -22,22 +22,27 @@
  *
  * SPDX-License-Identifier: MIT
  ******************************************************************************/
-package org.eclipse.basyx.extensions.i4dot0.domain;
+package org.eclipse.basyx.extensions.i4dot0.domain.message;
+
+import org.eclipse.basyx.extensions.i4dot0.domain.Message;
+import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
+
+import java.util.List;
 
 /**
- * Represents a I4.0 language message - VDI/VDE 2193. Please use either of the subclasses, depending on if you want to publish a list of submodels or a list of key-value pairs. A message consists of a frame and interactionsElements.
+ * This extension of {@link Message} is used to create a I4.0 message where the interactionElements are represented as List of SubmodelElementCollections.
  *
  * @author wand
  */
-public abstract class Message {
+public class SubmodelElementCollectionMessage extends Message {
 
-	private MessageFrame frame;
+	private List<SubmodelElementCollection> interactionElements;
 
-	public MessageFrame getFrame() {
-		return frame;
+	public List<SubmodelElementCollection> getInteractionElements() {
+		return interactionElements;
 	}
 
-	public void setFrame(MessageFrame frame) {
-		this.frame = frame;
+	public void setInteractionElements(List<SubmodelElementCollection> interactionElements) {
+		this.interactionElements = interactionElements;
 	}
 }

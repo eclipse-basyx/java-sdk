@@ -25,7 +25,7 @@
 package org.eclipse.basyx.extensions.i4dot0.domain.message;
 
 import org.eclipse.basyx.extensions.i4dot0.domain.Message;
-import org.eclipse.basyx.submodel.metamodel.map.submodelelement.SubmodelElementCollection;
+import org.eclipse.basyx.submodel.metamodel.map.Submodel;
 
 import java.util.List;
 
@@ -36,13 +36,13 @@ import java.util.List;
  */
 public class SubmodelMessage extends Message {
 
-	private List<SubmodelElementCollection> interactionElements;
+	private List<Submodel> interactionElements;
 
-	public List<SubmodelElementCollection> getInteractionElements() {
+	public List<Submodel> getInteractionElements() {
 		return interactionElements;
 	}
 
-	public void setInteractionElements(List<SubmodelElementCollection> interactionElements) {
+	public void setInteractionElements(List<Submodel> interactionElements) {
 		this.interactionElements = interactionElements;
 	}
 }
